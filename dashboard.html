@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div>
+        <strong>Auth Demo</strong>
+      </div>
+
+      <div class="header-actions">
+        <button id="logoutBtn" class="btn danger">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="dashboard-card">
+      <h2 id="welcome">Welcome</h2>
+      <p id="userEmail"></p>
+
+      <div class="stats">
+        <div class="stat">
+          <h3 id="regDate">—</h3>
+          <p>Registered on</p>
+        </div>
+        <div class="stat">
+          <h3 id="lastSeen">—</h3>
+          <p>Last seen</p>
+        </div>
+      </div>
+
+      <div class="actions" style="margin-top:20px;">
+        <button id="logoutBtn2" class="btn danger">Logout</button>
+        <button id="backLogin" class="btn ghost">Back to Login</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="toastHold"></div>
+  <script src="script.js"></script>
+</body>
+</html>

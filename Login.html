@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="card">
+      <div class="card-header">
+        <h1>Welcome back</h1>
+        <p>Login to your account</p>
+      </div>
+
+      <form id="loginForm" class="form">
+        <div class="field">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" placeholder="you@example.com" required />
+          <small class="hint" id="loginEmailHint"></small>
+        </div>
+
+        <div class="field password-field">
+          <label for="loginPassword">Password</label>
+          <div class="pw-wrapper">
+            <input id="loginPassword" type="password" placeholder="Your password" required minlength="6" />
+            <button type="button" class="eye-btn" aria-label="toggle password" id="loginToggle">
+              <!-- simple eye svg -->
+              <svg id="eyeOpen" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg id="eyeClosed" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-6 0-10-7-10-7a20.36 20.36 0 0 1 5.11-6.25"/><path d="M1 1l22 22"/></svg>
+            </button>
+          </div>
+          <small class="hint" id="loginPasswordHint"></small>
+        </div>
+
+        <div class="row-between">
+          <label class="remember">
+            <input type="checkbox" id="rememberMe" /> Remember me
+          </label>
+          <button type="button" class="link-like" id="forgotBtn">Forgot password?</button>
+        </div>
+
+        <div class="actions">
+          <button id="loginBtn" class="btn primary" type="submit">Login</button>
+        </div>
+
+        <div class="or">or</div>
+
+        <p class="small">
+          New here? <a href="registration.html">Create an account</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <!-- toast container + spinner -->
+  <div id="toastHold"></div>
+
+  <div id="spinnerOverlay" class="overlay hidden">
+    <div class="spinner"></div>
+    <div class="spinner-text">Signing in...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

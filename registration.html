@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="card">
+      <div class="card-header">
+        <h1>Create account</h1>
+        <p>Join us — it only takes a minute</p>
+      </div>
+
+      <form id="registerForm" class="form">
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input id="fullName" type="text" placeholder="Your name" required />
+          <small class="hint" id="nameHint"></small>
+        </div>
+
+        <div class="field">
+          <label for="regEmail">Email</label>
+          <input id="regEmail" type="email" placeholder="you@example.com" required />
+          <small class="hint" id="emailHint"></small>
+        </div>
+
+        <div class="field password-field">
+          <label for="regPassword">Password</label>
+          <div class="pw-wrapper">
+            <input id="regPassword" type="password" placeholder="At least 6 characters" required minlength="6" />
+            <button type="button" class="eye-btn" aria-label="toggle password" id="regToggle">
+              <svg id="rEyeOpen" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg id="rEyeClosed" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-6 0-10-7-10-7a20.36 20.36 0 0 1 5.11-6.25"/><path d="M1 1l22 22"/></svg>
+            </button>
+          </div>
+          <small class="hint" id="passHint"></small>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm password</label>
+          <input id="confirmPassword" type="password" placeholder="Repeat password" required />
+          <small class="hint" id="confirmHint"></small>
+        </div>
+
+        <div class="actions">
+          <button id="registerBtn" class="btn primary" type="submit">Register</button>
+        </div>
+
+        <div class="or">or</div>
+
+        <p class="small">
+          Already have an account? <a href="login.html">Sign in</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <div id="toastHold"></div>
+  <script src="script.js"></script>
+</body>
+</html>
