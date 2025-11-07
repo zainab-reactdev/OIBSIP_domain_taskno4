@@ -1,4 +1,4 @@
-# Login & Registration Authentication System - Internship Task
+# Login & Registration Authentication System 
 
 **Domain:** Web Development  
 **Task No:** 4  
